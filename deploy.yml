@@ -11,10 +11,9 @@
         source: pull
       register: docker_pull_result
 
-    - name: Display Docker Pull Result
-      debug:
-        var: docker_pull_result
 
+    - name: Remove container
+      shell: docker rm -f spe
 
     - name: Running container
       shell: docker run -it -d --name spe samayochita/spe
