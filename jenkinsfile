@@ -4,10 +4,7 @@ pipeline {
     environment {
 
         GITHUB_REPO_URL = 'https://github.com/samayochita/calculator.git'
-        registry = "samayochita/calculator"
-        registryCredential = 'DockerHubCred'
-        dockerImage = ""
-        BUILD_NUMBER = "1.0"
+        DOCKER_IMAGE_NAME = 'calculator'
     }
 
     stages {
@@ -65,12 +62,5 @@ pipeline {
 
 
     }
-    post {
-            failure {
-                script {
-                    def jenkinsBuildUrl = "http://localhost:8080/job/${env.JOB_NAME}/${env.BUILD_NUMBER}/console"
-                    mail bcc: '', cc: '', from: '', replyTo: '', to: 'samayochita@gmail.com', subject: "Pipeline failed in Jenkins: ${env.JOB_NAME} - #${env.BUILD_NUMBER}", body: "Check console output at ${jenkinsBuildUrl} to view the results."
-                }
-            }
-    }
+
 }
