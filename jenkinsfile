@@ -7,7 +7,7 @@ pipeline {
     environment {
 
         GITHUB_REPO_URL = 'https://github.com/samayochita/SPE.git'
-        DOCKER_IMAGE_NAME = 'calculator'
+        DOCKER_IMAGE_NAME = 'SPE'
     }
 
     stages {
@@ -36,7 +36,7 @@ pipeline {
                 script {
                     // Build Docker image
                     docker.build("${DOCKER_IMAGE_NAME}", '.')
-                    //sh 'docker build -t calculator .'
+                    //sh 'docker build -t SPE .'
                 }
             }
         }
@@ -45,8 +45,8 @@ pipeline {
             steps {
                 script{
                     docker.withRegistry('', 'DockerHubCred') {
-                    sh 'docker tag calculator samayochita/calculator'
-                    sh 'docker push samayochita/calculator'
+                    sh 'docker tag SPE samayochita/SPE'
+                    sh 'docker push samayochita/SPE'
                     }
                  }
             }
