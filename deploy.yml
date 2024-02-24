@@ -15,8 +15,6 @@
       debug:
         var: docker_pull_result
 
-    - name: Remove container
-      shell: docker rm -f spe
 
     - name: Running container
       shell: docker run -it -d --name spe samayochita/spe
