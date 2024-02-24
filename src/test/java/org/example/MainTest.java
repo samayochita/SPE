@@ -21,7 +21,6 @@ public class MainTest {
         double result = Main.squareRootOperation(createScannerWithInput(String.valueOf(input)));
         assertEquals(result, expected, epsilon);
     }
-
     @Test
     public void testFactorialOperation() {
         int input = 5;
@@ -29,7 +28,6 @@ public class MainTest {
         double result = Main.factorialOperation(createScannerWithInput(String.valueOf(input)));
         assertEquals(result, expected);
     }
-
     @Test
     public void testNaturalLogarithmOperation() {
         double input = 10;
@@ -38,7 +36,6 @@ public class MainTest {
         double result = Main.naturalLogarithmOperation(createScannerWithInput(String.valueOf(input)));
         assertEquals(result, expected, epsilon);
     }
-
     @Test
     public void testPowerFunctionOperation() {
         double base = 2;
@@ -47,7 +44,6 @@ public class MainTest {
         double result = Main.powerFunctionOperation(createScannerWithInput(base + "\n" + exponent));
         assertEquals(result, expected);
     }
-
 
     private Scanner createScannerWithInput(String input) {
         return new Scanner(new ByteArrayInputStream(input.getBytes()));
