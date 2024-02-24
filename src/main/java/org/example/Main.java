@@ -55,7 +55,7 @@ public class Main {
         }
     }
 
-    private static double factorial(int n) {
+    public static double factorial(int n) {
         if (n == 0 || n == 1) {
             return 1;
         }
