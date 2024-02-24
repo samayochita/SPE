@@ -5,8 +5,7 @@ pipeline {
          maven 'Maven'
     }
     environment {
-         DOCKERHUB_CREDENTIALS=credentials('DockerHubCred')
-        DOCKERHUB_USERNAME='samayochita'
+
         GITHUB_REPO_URL = 'https://github.com/samayochita/SPE.git'
         DOCKER_IMAGE_NAME = 'SPE'
     }
