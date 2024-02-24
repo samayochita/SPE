@@ -59,7 +59,7 @@ pipeline {
                    // Use the correct path to ansible-playbook
                   //sh "/opt/homebrew/bin/ansible-playbook -i inventory deploy.yml"
                    // Use sshpass to provide the SSH password to Ansible
-                  sh "/opt/homebrew/bin/sshpass -p '553' /opt/homebrew/bin/ansible-playbook -i inventory deploy.yml"
+                  sh "/opt/homebrew/bin/sshpass -p '0553' /opt/homebrew/bin/ansible-playbook -i inventory deploy.yml"
 
 
                 }
