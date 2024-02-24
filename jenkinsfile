@@ -20,13 +20,11 @@ pipeline {
             }
         }
          stage ("Build via Maven") {
-                        script {
-                            // Change to the directory containing pom.xml before running Maven
-                            dir("${env.WORKSPACE}") {
-                                                    sh 'mvn clean install'
-                            }
-                        }
-         }
+                steps {
+
+                    sh 'mvn clean install'
+                }
+        }
 
          stage ("Run tests") {
                 steps {
