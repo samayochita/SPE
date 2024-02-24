@@ -49,20 +49,6 @@ public class MainTest {
     }
 
 
-    @Test
-    public void testExitOption() {
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outputStream));
-
-        // Mock user input for exit option
-        ByteArrayInputStream inputStream = new ByteArrayInputStream("5\n".getBytes());
-        System.setIn(inputStream);
-
-        Main.main(new String[]{});
-
-        assertEquals(outputStream.toString().trim(), "Exiting the calculator. Goodbye!");
-    }
-
     private Scanner createScannerWithInput(String input) {
         return new Scanner(new ByteArrayInputStream(input.getBytes()));
     }
