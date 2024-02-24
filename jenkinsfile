@@ -1,6 +1,9 @@
 pipeline {
     agent any
 
+    tools{
+    tool name: 'maven' type: 'maven'
+    }
     environment {
 
         GITHUB_REPO_URL = 'https://github.com/samayochita/calculator.git'
