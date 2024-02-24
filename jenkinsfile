@@ -54,16 +54,14 @@ pipeline {
 
    stage('Run Ansible Playbook') {
             steps {
-
-
-                    sh 'ansible-playbook -i inventory deploy.yml'
+                script {
 
                    // Use the correct path to ansible-playbook
 
-                   // sh '/bin/bash -c "/opt/homebrew/bin/sshpass -p 0553 /opt/homebrew/bin/ansible-playbook -i inventory deploy.yml"'
+                   sh '/bin/bash -c "/opt/homebrew/bin/sshpass -p 0553 /opt/homebrew/bin/ansible-playbook -i inventory deploy.yml"'
 
                 }
-
+            }
         }
 
 
