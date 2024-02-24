@@ -6,7 +6,7 @@ pipeline {
     }
     environment {
 
-        GITHUB_REPO_URL = 'https://github.com/samayochita/calculator.git'
+        GITHUB_REPO_URL = 'https://github.com/samayochita/SPE.git'
         DOCKER_IMAGE_NAME = 'calculator'
     }
 
@@ -21,7 +21,6 @@ pipeline {
         }
          stage ("Build via Maven") {
                 steps {
-
                     sh 'mvn clean install'
                 }
         }
