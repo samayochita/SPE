@@ -1,16 +1,13 @@
 pipeline {
     agent any
-    environment{
-    registry = "samayochita/calculator"
-    registryCredential = 'DockerHubCred'
-    dockerImage = ""
-    BUILD_NUMBER = "1.0"
 
-    }
-    
     environment {
-        DOCKER_IMAGE_NAME = 'calculator'
+
         GITHUB_REPO_URL = 'https://github.com/samayochita/calculator.git'
+        registry = "samayochita/calculator"
+        registryCredential = 'DockerHubCred'
+        dockerImage = ""
+        BUILD_NUMBER = "1.0"
     }
 
     stages {
