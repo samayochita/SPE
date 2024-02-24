@@ -1,8 +1,11 @@
 pipeline {
     agent any
-    tools {
-    maven 'Maven'
-    }
+    environment{
+    registry = "samayochita/calculator"
+    registryCredential = 'DockerHubCred'
+    dockerImage = ""
+    BUILD_NUMBER = "1.0"
+    j}
     
     environment {
         DOCKER_IMAGE_NAME = 'calculator'
