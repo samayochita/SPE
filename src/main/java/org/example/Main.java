@@ -21,26 +21,16 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    System.out.print("Enter a number: ");
-                    double sqrtInput = scanner.nextDouble();
-                    result = Math.sqrt(sqrtInput);
+                    result = squareRootOperation(scanner);
                     break;
                 case 2:
-                    System.out.print("Enter a number: ");
-                    int factorialInput = scanner.nextInt();
-                    result = factorial(factorialInput);
+                    result = factorialOperation(scanner);
                     break;
                 case 3:
-                    System.out.print("Enter a number: ");
-                    double lnInput = scanner.nextDouble();
-                    result = Math.log(lnInput);
+                    result = naturalLogarithmOperation(scanner);
                     break;
                 case 4:
-                    System.out.print("Enter base (x): ");
-                    double base = scanner.nextDouble();
-                    System.out.print("Enter exponent (y): ");
-                    double exponent = scanner.nextDouble();
-                    result = Math.pow(base, exponent);
+                    result = powerFunctionOperation(scanner);
                     break;
                 case 5:
                     System.out.println("Exiting the calculator. Goodbye!");
@@ -53,6 +43,32 @@ public class Main {
 
             System.out.println("Result: " + result);
         }
+    }
+
+    public static double squareRootOperation(Scanner scanner) {
+        System.out.print("Enter a number: ");
+        double sqrtInput = scanner.nextDouble();
+        return Math.sqrt(sqrtInput);
+    }
+
+    public static double factorialOperation(Scanner scanner) {
+        System.out.print("Enter a number: ");
+        int factorialInput = scanner.nextInt();
+        return factorial(factorialInput);
+    }
+
+    public static double naturalLogarithmOperation(Scanner scanner) {
+        System.out.print("Enter a number: ");
+        double lnInput = scanner.nextDouble();
+        return Math.log(lnInput);
+    }
+
+    public static double powerFunctionOperation(Scanner scanner) {
+        System.out.print("Enter base (x): ");
+        double base = scanner.nextDouble();
+        System.out.print("Enter exponent (y): ");
+        double exponent = scanner.nextDouble();
+        return Math.pow(base, exponent);
     }
 
     public static double factorial(int n) {
