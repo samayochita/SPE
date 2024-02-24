@@ -57,7 +57,10 @@ pipeline {
                 script {
 
                    // Use the correct path to ansible-playbook
-                  sh "/opt/homebrew/bin/ansible-playbook -i inventory deploy.yml --ask-pass"
+                  //sh "/opt/homebrew/bin/ansible-playbook -i inventory deploy.yml"
+                   // Use sshpass to provide the SSH password to Ansible
+                  sh "/usr/bin/sshpass -p '553' /opt/homebrew/bin/ansible-playbook -i inventory deploy.yml"
+
 
                 }
             }
